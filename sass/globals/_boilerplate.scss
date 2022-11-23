@@ -1,0 +1,25 @@
+@use 'fonts' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+	color: inherit;
+}
+
+:root {
+	font-family: $fontFamily;
+	font-size: 100%;
+}

@@ -1,0 +1,35 @@
+@use '../globals/breakpoints' as b;
+@use '../globals/colors' as c;
+
+.nav {
+	display: flex;
+	align-items: center;
+	padding: 2rem 1rem 1rem;
+	gap: 2rem;
+
+	&__toggle-menu {
+		display: none;
+	}
+	&__link-container {
+		list-style: none;
+		display: flex;
+		gap: 1rem;
+	}
+	&__link {
+		color: c.$GrayishViolet;
+	}
+	&__button-container {
+		margin-left: auto;
+	}
+
+	@media (max-width: map-get(b.$breakpoints-max, 'small')) {
+		justify-content: space-between;
+		&__toggle-menu {
+			display: block;
+		}
+		&__link-container,
+		&__button-container {
+			display: none;
+		}
+	}
+}

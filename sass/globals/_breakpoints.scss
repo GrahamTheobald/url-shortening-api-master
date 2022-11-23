@@ -1,0 +1,8 @@
+@use 'functions' as f;
+
+$breakpoints-min: (
+	'medium': f.rem(600) * 1em,
+);
+$breakpoints-max: (
+	'small': f.rem(599.9) * 1em,
+);
