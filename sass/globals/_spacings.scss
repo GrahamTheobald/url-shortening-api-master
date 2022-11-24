@@ -12,6 +12,6 @@ $max-width: f.rem(1100) * 1em;
 	@media (min-width: map-get(b.$breakpoints-min, 'medium')) {
 		max-width: $max-width;
 		margin-inline: auto;
-		padding: $spacing-m calc($spacing-l * 2);
+		padding-inline: calc($spacing-l * 2);
 	}
 }

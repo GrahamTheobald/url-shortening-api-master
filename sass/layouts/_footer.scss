@@ -5,6 +5,7 @@ footer {
 }
 .footer {
 	@include g.structure;
+	padding-block: g.$spacing-l;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

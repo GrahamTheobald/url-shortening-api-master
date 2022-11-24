@@ -156,7 +156,7 @@ header {
   header {
     max-width: 68.75em;
     margin-inline: auto;
-    padding: 1rem 4rem;
+    padding-inline: 4rem;
   }
 }
 @media (max-width: 37.49375em) {
@@ -176,7 +176,7 @@ main {
   .main-container {
     max-width: 68.75em;
     margin-inline: auto;
-    padding: 1rem 4rem;
+    padding-inline: 4rem;
   }
 }
 
@@ -403,6 +403,7 @@ footer {
 
 .footer {
   padding: 1rem;
+  padding-block: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -414,7 +415,7 @@ footer {
   .footer {
     max-width: 68.75em;
     margin-inline: auto;
-    padding: 1rem 4rem;
+    padding-inline: 4rem;
   }
 }
 @media (min-width: 37.5em) {
