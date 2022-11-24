@@ -1,12 +1,10 @@
-@use '../globals/breakpoints' as b;
-@use '../globals/colors' as c;
-@use '../globals/spacings' as s;
+@use '../globals/' as g;
 
 .nav {
 	display: flex;
 	align-items: center;
-	padding-top: s.$spacing-l;
-	gap: s.$spacing-l;
+	padding-top: g.$spacing-l;
+	gap: g.$spacing-l;
 	font-size: 0.8rem;
 	font-weight: 700;
 
@@ -21,18 +19,23 @@
 	&__link-container {
 		list-style: none;
 		display: flex;
-		gap: s.$spacing-m;
+		gap: g.$spacing-m;
 	}
 	&__link {
-		color: c.$GrayishViolet;
+		color: g.$GrayishViolet;
+		&:hover {
+			transition: g.$transition;
+			cursor: pointer;
+			color: #000;
+		}
 	}
 	&__button-container {
 		margin-left: auto;
 		display: flex;
-		gap: s.$spacing-m;
+		gap: g.$spacing-m;
 	}
 
-	@media (max-width: map-get(b.$breakpoints-max, 'small')) {
+	@media (max-width: map-get(g.$breakpoints-max, 'small')) {
 		justify-content: space-between;
 		position: relative;
 		&__toggle-menu {
@@ -48,24 +51,24 @@
 			width: initial;
 			font-size: 1.2rem;
 			bottom: 0;
-			left: s.$spacing-m;
-			right: s.$spacing-m;
+			left: g.$spacing-m;
+			right: g.$spacing-m;
 			translate: 0 100%;
-			background-color: c.$DarkViolet;
-			padding: s.$spacing-m;
-			border-radius: s.$spacing-m;
+			background-color: g.$DarkViolet;
+			padding: g.$spacing-m;
+			border-radius: g.$spacing-m;
 		}
 		&__button-container {
-			padding-block: s.$spacing-m;
+			padding-block: g.$spacing-m;
 			margin: auto;
 			flex-direction: column;
 		}
 		&__link-container {
 			width: 100%;
-			padding-block: s.$spacing-m;
+			padding-block: g.$spacing-m;
 			flex-direction: column;
 			align-items: center;
-			border-bottom: 1px solid c.$GrayA;
+			border-bottom: 1px solid g.$GrayA;
 		}
 		&__link {
 			color: #fff;

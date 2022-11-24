@@ -3,3 +3,5 @@
 @function rem($px) {
 	@return math.div($px, 16);
 }
+
+$transition: 0.3s;

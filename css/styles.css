@@ -51,6 +51,11 @@ body {
 .nav__link {
   color: hsl(257deg, 7%, 63%);
 }
+.nav__link:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  color: #000;
+}
 .nav__button-container {
   margin-left: auto;
   display: flex;
@@ -352,9 +357,18 @@ footer {
 .footer__links .links__list .link {
   color: hsl(257deg, 7%, 63%);
 }
+.footer__links .links__list .link:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  color: hsl(180deg, 66%, 49%);
+}
 .footer__contact {
   display: flex;
   gap: 1rem;
+}
+.footer__contact .contact__icon:hover {
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(65%) sepia(66%) saturate(433%) hue-rotate(131deg) brightness(90%) contrast(100%);
 }
 
 .btn {
@@ -368,6 +382,11 @@ footer {
   border-radius: 2em;
   font-weight: 700;
   color: #fff;
+}
+.btn:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: hsl(180deg, 66%, 69%);
 }
 
 .nav__button--login {

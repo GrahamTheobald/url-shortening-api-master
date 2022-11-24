@@ -38,11 +38,23 @@ footer {
 			list-style: none;
 			.link {
 				color: g.$GrayishViolet;
+				&:hover {
+					transition: g.$transition;
+					cursor: pointer;
+					color: g.$Cyan;
+				}
 			}
 		}
 	}
 	&__contact {
 		display: flex;
 		gap: g.$spacing-m;
+		.contact__icon {
+			&:hover {
+				cursor: pointer;
+				filter: brightness(0) saturate(100%) invert(65%) sepia(66%)
+					saturate(433%) hue-rotate(131deg) brightness(90%) contrast(100%);
+			}
+		}
 	}
 }
