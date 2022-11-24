@@ -156,6 +156,7 @@ header {
   header {
     max-width: 68.75em;
     margin-inline: auto;
+    padding: 1rem 4rem;
   }
 }
 @media (max-width: 37.49375em) {
@@ -175,6 +176,7 @@ main {
   .main-container {
     max-width: 68.75em;
     margin-inline: auto;
+    padding: 1rem 4rem;
   }
 }
 
@@ -198,6 +200,8 @@ main {
 
 .input {
   padding: 1rem;
+  max-width: 25rem;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -250,6 +254,7 @@ main {
   .input {
     padding: 3rem;
     flex-direction: row;
+    max-width: none;
     background-image: url(../../images/bg-boost-desktop.svg);
   }
   .input__url-wrapper {
@@ -409,6 +414,7 @@ footer {
   .footer {
     max-width: 68.75em;
     margin-inline: auto;
+    padding: 1rem 4rem;
   }
 }
 @media (min-width: 37.5em) {
