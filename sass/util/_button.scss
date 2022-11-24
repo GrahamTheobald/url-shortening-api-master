@@ -11,6 +11,7 @@
 	border-radius: 2em;
 	font-weight: 700;
 	color: #fff;
+	white-space: nowrap;
 	&:hover {
 		transition: g.$transition background-color;
 		cursor: pointer;
