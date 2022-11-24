@@ -1,35 +1,74 @@
 @use '../globals/breakpoints' as b;
 @use '../globals/colors' as c;
+@use '../globals/spacings' as s;
 
 .nav {
 	display: flex;
 	align-items: center;
-	padding: 2rem 1rem 1rem;
-	gap: 2rem;
+	padding-top: s.$spacing-l;
+	gap: s.$spacing-l;
+	font-size: 0.8rem;
+	font-weight: 700;
 
 	&__toggle-menu {
 		display: none;
 	}
+	&__containers {
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
 	&__link-container {
 		list-style: none;
 		display: flex;
-		gap: 1rem;
+		gap: s.$spacing-m;
 	}
 	&__link {
 		color: c.$GrayishViolet;
 	}
 	&__button-container {
 		margin-left: auto;
+		display: flex;
+		gap: s.$spacing-m;
 	}
 
 	@media (max-width: map-get(b.$breakpoints-max, 'small')) {
 		justify-content: space-between;
+		position: relative;
 		&__toggle-menu {
 			display: block;
 		}
-		&__link-container,
-		&__button-container {
+		&__containers.reveal {
+			display: flex;
+		}
+		&__containers {
 			display: none;
+			flex-direction: column;
+			position: absolute;
+			width: initial;
+			font-size: 1.2rem;
+			bottom: 0;
+			left: s.$spacing-m;
+			right: s.$spacing-m;
+			translate: 0 100%;
+			background-color: c.$DarkViolet;
+			padding: s.$spacing-m;
+			border-radius: s.$spacing-m;
+		}
+		&__button-container {
+			padding-block: s.$spacing-m;
+			margin: auto;
+			flex-direction: column;
+		}
+		&__link-container {
+			width: 100%;
+			padding-block: s.$spacing-m;
+			flex-direction: column;
+			align-items: center;
+			border-bottom: 1px solid c.$GrayA;
+		}
+		&__link {
+			color: #fff;
 		}
 	}
 }

@@ -1,0 +1,85 @@
+@use '../globals/' as g;
+
+.statistics {
+	text-align: center;
+	padding-bottom: g.$spacing-l;
+	&__header {
+		max-width: g.rem(400) * 1em;
+		margin-inline: auto;
+		padding: g.$spacing-m;
+		.statistics__copy {
+			color: g.$GrayishViolet;
+			margin-top: g.$spacing-m;
+			margin-bottom: calc(g.$spacing-m * 4);
+		}
+	}
+
+	&__card-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@media (min-width: map-get(g.$breakpoints-min, 'medium')) {
+			flex-direction: row;
+			width: 100%;
+			height: 22rem;
+		}
+
+		.statistics__divider {
+			@media (min-width: map-get(g.$breakpoints-min, 'medium')) {
+				flex: 1;
+				height: g.$spacing-sm;
+			}
+			width: g.$spacing-sm;
+			height: calc(g.$spacing-l * 3);
+			background-color: g.$Cyan;
+		}
+		.statistics__card {
+			@media (min-width: map-get(g.$breakpoints-min, 'medium')) {
+				flex: 10;
+				&.flex-start {
+					align-self: flex-start;
+				}
+				&.flex-center {
+					align-self: center;
+				}
+				&.flex-end {
+					align-self: flex-end;
+				}
+			}
+			position: relative;
+			padding: g.$spacing-l;
+			padding-top: calc(g.$spacing-l * 2);
+			background-color: #fff;
+			border-radius: g.$spacing-sm;
+
+			.card__logo {
+				img {
+					display: block;
+				}
+				@media (min-width: map-get(g.$breakpoints-min, 'medium')) {
+					padding: calc(g.$spacing-m * 1.5);
+					left: 0;
+					translate: g.$spacing-l -50%;
+				}
+
+				position: absolute;
+				top: 0;
+				left: 50%;
+				translate: -50% -50%;
+				background-color: g.$DarkViolet;
+				padding: g.$spacing-m;
+				border-radius: 50%;
+				width: max-content;
+				margin-inline: auto;
+			}
+			.card__heading {
+				font-size: 1.5rem;
+				margin-bottom: g.$spacing-m;
+			}
+			.card__copy {
+				color: g.$GrayishViolet;
+			}
+		}
+	}
+}

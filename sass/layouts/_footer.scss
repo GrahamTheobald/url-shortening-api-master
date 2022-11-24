@@ -1,0 +1,48 @@
+@use '../globals/' as g;
+
+footer {
+	background-color: g.$VeryDarkViolet;
+}
+.footer {
+	@include g.structure;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: g.$spacing-l;
+	text-align: center;
+	padding-block: calc(g.$spacing-l * 2);
+	@media (min-width: map-get(g.$breakpoints-min, 'medium')) {
+		flex-direction: row;
+		align-items: flex-start;
+		gap: calc(g.$spacing-l * 2);
+	}
+
+	&__logo {
+		filter: brightness(0%) saturate(0%) invert(100%);
+	}
+	&__links {
+		display: flex;
+		flex-direction: column;
+		gap: g.$spacing-m;
+		@media (min-width: map-get(g.$breakpoints-min, 'medium')) {
+			flex-direction: row;
+			margin-left: auto;
+			gap: calc(g.$spacing-l * 2);
+			text-align: left;
+		}
+		.links__title {
+			color: #fff;
+			margin-bottom: g.$spacing-m;
+		}
+		.links__list {
+			list-style: none;
+			.link {
+				color: g.$GrayishViolet;
+			}
+		}
+	}
+	&__contact {
+		display: flex;
+		gap: g.$spacing-m;
+	}
+}

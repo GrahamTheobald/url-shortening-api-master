@@ -1,0 +1,16 @@
+@use '../globals/functions' as f;
+@use '../globals/breakpoints' as b;
+
+$spacing-sm: 0.5rem;
+$spacing-m: 1rem;
+$spacing-l: 2rem;
+
+$max-width: f.rem(1100) * 1em;
+
+@mixin structure {
+	padding: $spacing-m;
+	@media (min-width: map-get(b.$breakpoints-min, 'medium')) {
+		max-width: $max-width;
+		margin-inline: auto;
+	}
+}

@@ -1,0 +1,31 @@
+@use '../globals/' as g;
+
+.input {
+	padding: g.$spacing-m;
+	display: flex;
+	flex-direction: column;
+	gap: g.$spacing-m;
+	background-image: url(../../images/bg-boost-mobile.svg);
+	background-size: cover;
+	background-color: g.$DarkViolet;
+	border-radius: g.$spacing-sm;
+	translate: 0 calc(-50% - g.$spacing-m);
+	&__url {
+		font-size: inherit;
+		font-family: inherit;
+		border: none;
+		padding: g.$spacing-sm g.$spacing-m;
+		border-radius: g.$spacing-sm;
+		&:focus {
+			outline: none;
+		}
+	}
+	@media (min-width: map-get(g.$breakpoints-min, 'medium')) {
+		padding: g.$spacing-l calc(g.$spacing-l + 1rem);
+		flex-direction: row;
+		&__url {
+			flex: 7;
+		}
+		background-image: url(../../images/bg-boost-desktop.svg);
+	}
+}

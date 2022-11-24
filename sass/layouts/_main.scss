@@ -1,0 +1,27 @@
+@use '../globals/' as g;
+
+main {
+	background-color: g.$GrayA;
+}
+.main-container {
+	@include g.structure;
+}
+
+.boost {
+	padding-block: calc(g.$spacing-l * 2);
+	margin-inline: auto;
+	width: max-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: g.$spacing-m;
+	color: #fff;
+	font-size: 1.5rem;
+	background-image: url(../../images/bg-boost-mobile.svg);
+	background-size: cover;
+	background-color: g.$DarkViolet;
+	width: 100%;
+	.btn {
+		font-size: 1.2rem;
+	}
+}

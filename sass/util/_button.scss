@@ -1,0 +1,36 @@
+@use '../globals/colors' as c;
+@use '../globals/breakpoints' as b;
+@use '../globals/spacings' as s;
+
+.btn {
+	border: none;
+	outline: none;
+	font-size: inherit;
+	font-family: inherit;
+	background: transparent;
+	background-color: c.$Cyan;
+	padding: 0.5em 1.5em;
+	border-radius: 2em;
+	font-weight: 700;
+	color: #fff;
+}
+
+.nav__button {
+	&--login {
+		background-color: inherit;
+		color: c.$GrayishViolet;
+	}
+	@media (max-width: map-get(b.$breakpoints-max, 'small')) {
+		width: 100%;
+		&--login {
+			color: #fff;
+		}
+	}
+}
+
+.input__button {
+	border-radius: s.$spacing-sm;
+	@media (min-width: map-get(b.$breakpoints-min, 'medium')) {
+		padding: s.$spacing-m s.$spacing-l;
+	}
+}

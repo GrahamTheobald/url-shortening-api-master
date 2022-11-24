@@ -1,0 +1,10 @@
+@use '../globals/breakpoints' as b;
+@use '../globals/spacings' as s;
+
+header {
+	@include s.structure;
+	margin-bottom: 8rem;
+	@media (max-width: map-get(b.$breakpoints-max, 'small')) {
+		overflow: hidden;
+	}
+}

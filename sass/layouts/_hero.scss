@@ -1,0 +1,38 @@
+@use '../globals/spacings' as s;
+@use '../globals/colors' as c;
+@use '../globals/breakpoints' as b;
+@use '../globals/functions' as f;
+
+.hero {
+	&__image-container {
+		img {
+			max-width: none;
+			width: 150%;
+		}
+	}
+	&__copy {
+		color: c.$GrayishViolet;
+		margin-bottom: s.$spacing-l;
+	}
+	@media (max-width: map-get(b.$breakpoints-max, 'small')) {
+		text-align: center;
+		&__image-container {
+			max-width: f.rem(350) * 1em;
+		}
+	}
+	@media (min-width: map-get(b.$breakpoints-min, 'medium')) {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		&__image-container {
+			padding-left: calc(s.$spacing-l * 2);
+		}
+		&__heading {
+			font-size: 4rem;
+			line-height: 1.1;
+		}
+		&__copy {
+			width: 80%;
+		}
+	}
+}
