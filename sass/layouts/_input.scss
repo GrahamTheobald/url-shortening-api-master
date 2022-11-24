@@ -61,17 +61,6 @@
 		background-image: url(../../images/bg-boost-desktop.svg);
 	}
 	&__results-container {
-		&.copied {
-			.copy__button {
-				display: none;
-			}
-			.copied__button {
-				display: block;
-			}
-		}
-		.copied__button {
-			display: none;
-		}
 		display: flex;
 		flex-direction: column;
 		gap: g.$spacing-m;
@@ -84,6 +73,18 @@
 			display: flex;
 			flex-direction: column;
 			gap: g.$spacing-m;
+
+			&.copied {
+				.copy-link__button {
+					display: none;
+				}
+				.copied__button {
+					display: block;
+				}
+			}
+			.copied__button {
+				display: none;
+			}
 
 			@media (min-width: map-get(g.$breakpoints-min, 'medium')) {
 				flex-direction: row;

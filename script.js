@@ -14,6 +14,10 @@ submit.addEventListener('click', () => {
 })
 input.addEventListener('input', removeInvalid)
 menuButton.addEventListener('click', toggleMenu)
+resultsContainer.addEventListener('click', (e) => {
+	if (!e.target.matches('.copy-link__button')) return
+	copyToClipboard(e.target)
+})
 
 const storedUrls = getFromLocalStorage()
 storedUrls.length > 0 &&
@@ -61,6 +65,13 @@ function getFromLocalStorage() {
 
 	urls = urls ? urls : []
 	return urls
+}
+
+function copyToClipboard(div) {
+	const container = div.closest('.input__result')
+	const shortLink = container.querySelector('.result__return')
+	container.classList.add('copied')
+	navigator.clipboard.writeText(shortLink.innerText)
 }
 
 function clearInput() {
