@@ -53,7 +53,7 @@
 			bottom: 0;
 			left: g.$spacing-m;
 			right: g.$spacing-m;
-			translate: 0 100%;
+			translate: 0 calc(100% + g.$spacing-m);
 			background-color: g.$DarkViolet;
 			padding: g.$spacing-m;
 			border-radius: g.$spacing-m;

@@ -81,7 +81,7 @@ body {
     bottom: 0;
     left: 1rem;
     right: 1rem;
-    translate: 0 100%;
+    translate: 0 calc(100% + 1rem);
     background-color: hsl(257deg, 27%, 26%);
     padding: 1rem;
     border-radius: 1rem;
