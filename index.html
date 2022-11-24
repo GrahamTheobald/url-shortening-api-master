@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/styles.css" />
+		<script src="./script.js" defer></script>
 		<title>Frontend Mentor | Shortly URL shortening API Challenge</title>
 	</head>
 	<body>
@@ -50,27 +51,17 @@
 			<div class="main-container">
 				<div class="input-container">
 					<div class="input purple-bg">
-						<input
-							type="text"
-							class="input__url"
-							placeholder="Shorten a link here..."
-						/>
-						<button class="btn input__button">Shorten It!</button>
-					</div>
-					<div class="input__results-container">
-						<div class="input__result">
-							<p class="result__initial">https://www.test-url.com</p>
-							<p class="result__return">https://abcd.ef</p>
-							<button class="btn copy-link__button">Copy</button>
-							<button class="btn copied__button">Copied</button>
+						<div class="input__url-wrapper">
+							<input
+								data-input
+								type="text"
+								class="input__url"
+								placeholder="Shorten a link here..."
+							/>
 						</div>
-						<div class="input__result">
-							<p class="result__initial">https://www.test-url.com</p>
-							<p class="result__return">https://abcd.ef</p>
-							<button class="btn copy-link__button">Copy</button>
-							<button class="btn copied__button">Copied</button>
-						</div>
+						<button data-submit class="btn input__button">Shorten It!</button>
 					</div>
+					<div class="input__results-container"></div>
 				</div>
 				<div class="statistics">
 					<div class="statistics__header">
@@ -182,4 +173,13 @@
 			</div>
 		</footer>
 	</body>
+
+	<template id="result_div">
+		<div class="input__result">
+			<p class="result__initial">https://www.test-url.com</p>
+			<p class="result__return">https://abcd.ef</p>
+			<button class="btn copy-link__button">Copy</button>
+			<button class="btn copied__button">Copied!</button>
+		</div>
+	</template>
 </html>
