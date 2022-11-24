@@ -12,7 +12,7 @@
 	font-weight: 700;
 	color: #fff;
 	&:hover {
-		transition: g.$transition;
+		transition: g.$transition background-color;
 		cursor: pointer;
 		background-color: g.$CyanHov;
 	}
@@ -35,5 +35,20 @@
 	border-radius: g.$spacing-sm;
 	@media (min-width: map-get(g.$breakpoints-min, 'medium')) {
 		padding: g.$spacing-m g.$spacing-l;
+	}
+}
+
+.copy-link__button,
+.copied__button {
+	border-radius: g.$spacing-sm;
+	width: 100%;
+	@media (min-width: map-get(g.$breakpoints-min, 'medium')) {
+		width: max-content;
+	}
+}
+.copied__button {
+	background-color: g.$DarkViolet;
+	&:hover {
+		background-color: g.$DarkViolet;
 	}
 }

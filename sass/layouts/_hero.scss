@@ -1,9 +1,7 @@
-@use '../globals/spacings' as s;
-@use '../globals/colors' as c;
-@use '../globals/breakpoints' as b;
-@use '../globals/functions' as f;
+@use '../globals/' as g;
 
 .hero {
+	margin-top: g.$spacing-l;
 	&__image-container {
 		img {
 			max-width: none;
@@ -11,25 +9,29 @@
 		}
 	}
 	&__copy {
-		color: c.$GrayishViolet;
-		margin-bottom: s.$spacing-l;
+		color: g.$GrayishViolet;
+		margin-bottom: g.$spacing-l;
 	}
-	@media (max-width: map-get(b.$breakpoints-max, 'small')) {
+	@media (max-width: map-get(g.$breakpoints-max, 'small')) {
 		text-align: center;
 		&__image-container {
-			max-width: f.rem(350) * 1em;
+			max-width: g.rem(350) * 1em;
 		}
 	}
-	@media (min-width: map-get(b.$breakpoints-min, 'medium')) {
+	@media (min-width: map-get(g.$breakpoints-min, 'medium')) {
 		display: flex;
 		flex-direction: row-reverse;
 		align-items: center;
 		&__image-container {
-			padding-left: calc(s.$spacing-l * 2);
+			padding-left: calc(g.$spacing-l * 2);
 		}
 		&__heading {
-			font-size: 4rem;
+			font-size: 3rem;
 			line-height: 1.1;
+			margin-bottom: g.$spacing-sm;
+			@media (min-width: map-get(g.$breakpoints-min, 'large')) {
+				font-size: 4rem;
+			}
 		}
 		&__copy {
 			width: 80%;

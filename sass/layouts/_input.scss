@@ -28,4 +28,53 @@
 		}
 		background-image: url(../../images/bg-boost-desktop.svg);
 	}
+	&__results-container {
+		&.copied {
+			.copy__button {
+				display: none;
+			}
+			.copied__button {
+				display: block;
+			}
+		}
+		.copied__button {
+			display: none;
+		}
+		display: flex;
+		flex-direction: column;
+		gap: g.$spacing-m;
+		translate: 0 calc(g.$spacing-m * -4);
+
+		.input__result {
+			background-color: #fff;
+			padding: g.$spacing-m;
+			border-radius: g.$spacing-sm;
+			display: flex;
+			flex-direction: column;
+			gap: g.$spacing-m;
+
+			@media (min-width: map-get(g.$breakpoints-min, 'medium')) {
+				flex-direction: row;
+				align-items: center;
+			}
+
+			.result__return {
+				color: g.$Cyan;
+				margin-left: auto;
+				@media (max-width: map-get(g.$breakpoints-max, 'small')) {
+					position: relative;
+					margin-top: g.$spacing-m;
+					margin-left: 0;
+					&::before {
+						content: '';
+						position: absolute;
+						top: calc(g.$spacing-m * -1);
+						left: calc(g.$spacing-m * -1);
+						right: calc(g.$spacing-m * -1);
+						border: 1px solid g.$GrayA;
+					}
+				}
+			}
+		}
+	}
 }

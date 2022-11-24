@@ -39,7 +39,7 @@ footer {
 			.link {
 				color: g.$GrayishViolet;
 				&:hover {
-					transition: g.$transition;
+					transition: g.$transition color;
 					cursor: pointer;
 					color: g.$Cyan;
 				}
